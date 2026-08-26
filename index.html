@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mundo Dos Cachos - Guia de Curvaturas e Cuidados</title>
+  <title>Riquelme - Guia de Cachos Masculinos</title>
   <style>
     :root {
-      --primary: #7b4397;
-      --secondary: #dc2430;
-      --bg-color: #faf6f0;
-      --card-bg: #ffffff;
-      --text-color: #2b2b2b;
+      --primary: #2563eb;
+      --accent: #3b82f6;
+      --bg-color: #0f172a;
+      --card-bg: #1e293b;
+      --text-color: #f8fafc;
+      --subtext: #94a3b8;
     }
 
     * {
@@ -26,140 +27,203 @@
       line-height: 1.6;
     }
 
+    /* Cabeçalho do Riquelme */
     header {
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      background: linear-gradient(135deg, #1e3a8a, var(--primary));
       color: white;
       text-align: center;
-      padding: 3rem 1rem;
+      padding: 2.5rem 1rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     }
 
     header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
+      font-size: 2.2rem;
+      margin-bottom: 0.3rem;
+      letter-spacing: 0.5px;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #93c5fd;
     }
 
     main {
-      max-width: 1000px;
+      max-width: 650px;
       margin: 2rem auto;
       padding: 0 1rem;
     }
 
-    .grid-section {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    .feed {
+      display: flex;
+      flex-direction: column;
       gap: 2rem;
-      margin-top: 2rem;
     }
 
-    .card {
+    /* Posts empilhados */
+    .post-card {
       background: var(--card-bg);
-      border-radius: 12px;
+      border-radius: 16px;
       overflow: hidden;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-      transition: transform 0.2s ease;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+      border: 1px solid #334155;
     }
 
-    .card:hover {
-      transform: translateY(-5px);
+    .post-header {
+      padding: 1rem 1.2rem;
+      border-bottom: 1px solid #334155;
+      display: flex;
+      flex-direction: column;
     }
 
-    .card img {
+    .post-header h3 {
+      font-size: 1.1rem;
+      color: #60a5fa;
+    }
+
+    .post-header span {
+      font-size: 0.85rem;
+      color: var(--subtext);
+    }
+
+    .post-image {
       width: 100%;
-      height: 220px;
+      height: 350px;
       object-fit: cover;
+      display: block;
     }
 
-    .card-content {
+    .post-content {
       padding: 1.5rem;
     }
 
-    .card-content h2 {
-      color: var(--primary);
+    .post-content h2 {
+      color: var(--text-color);
+      font-size: 1.3rem;
       margin-bottom: 0.5rem;
+    }
+
+    .post-content p {
+      color: #cbd5e1;
+      margin-bottom: 1.2rem;
+    }
+
+    /* Botão de Curtir */
+    .like-btn {
+      background-color: rgba(37, 99, 235, 0.15);
+      border: 2px solid var(--accent);
+      color: #60a5fa;
+      padding: 0.6rem 1.4rem;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 0.95rem;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .like-btn:hover {
+      background-color: var(--accent);
+      color: white;
+    }
+
+    .like-btn.liked {
+      background-color: var(--primary);
+      border-color: var(--primary);
+      color: white;
+      box-shadow: 0 0 12px rgba(37, 99, 235, 0.5);
     }
 
     footer {
       text-align: center;
-      padding: 2rem;
-      background: #eee;
-      margin-top: 3rem;
+      padding: 2.5rem 1rem;
+      color: var(--subtext);
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
 
+  <!-- Perfil do Riquelme -->
   <header>
-    <h1>Universo Cacheado</h1>
-    <p>Guia prático para valorizar a textura natural dos seus fios</p>
+    <h1>Dicas de Cachos do Riquelme 💈</h1>
+    <p>Rotina de cuidados, cortes modernos e estilização masculina</p>
   </header>
 
   <main>
-    <section class="grid-section">
-      <article class="card">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOcalguX7p22wn6EcUoTWgEF9u7H31uMRcmRlDyQVorMbX-EX_M2WECCc&s=10" alt="Tabela de curvaturas de cabelos cacheados e crespos">
-        <div class="card-content">
-          <h2>Tipos de Curvatura</h2>
-          <p>Entender a diferença entre os tipos 3A, 3B e 3C é essencial para escolher os produtos corretos e garantir a definição ideal dos fios.</p>
+    <section class="feed">
+
+      <!-- Post 1 -->
+      <article class="post-card">
+        <div class="post-header">
+          <h3>Riquelme • Cachos Masculinos</h3>
+          <span>Post #1 • Estilo & Corte</span>
+        </div>
+        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800" class="post-image" alt="Homem de cabelo cacheado com corte degradê">
+        <div class="post-content">
+          <h2>1. Corte Fade / Degradê com Cachos no Topo</h2>
+          <p>O estilo ideal pra quem quer praticidade. As laterais raspadas em degradê destacam o volume dos cachos no topo da cabeça e mantêm o visual sempre alinhado.</p>
+          <button class="like-btn" onclick="toggleLike(this)">
+            ♥ <span class="like-count">312</span> Curtidas
+          </button>
         </div>
       </article>
 
-      <article class="card">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFgHHdr6-nPRp3u-VOj1YVCUIwhJqldmYco2S-845oHBYClna3Kr-ZwW5e&s=10" alt="Rotina de cuidados com cabelo cacheado">
-        <div class="card-content">
-          <h2>Rotina de Tratamento</h2>
-          <p>Cabelos cacheados exigem nutrição e hidratação frequentes devido à dificuldade da oleosidade natural percorrer a extensão do fio em espiral.</p>
+      <!-- Post 2 -->
+      <article class="post-card">
+        <div class="post-header">
+          <h3>Riquelme • Cachos Masculinos</h3>
+          <span>Post #2 • Rotina Diária</span>
+        </div>
+        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800" class="post-image" alt="Homem com cachos definidos sorrindo">
+        <div class="post-content">
+          <h2>2. Como Lavar Sem Ressecar os Fios</h2>
+          <p>Não lave com shampoo todos os dias! Use shampoo 2 a 3 vezes por semana e capriche no condicionador nos outros dias. Cabelo cacheado masculino resseca rápido se lavar demais.</p>
+          <button class="like-btn" onclick="toggleLike(this)">
+            ♥ <span class="like-count">189</span> Curtidas
+          </button>
         </div>
       </article>
+
+      <!-- Post 3 -->
+      <article class="post-card">
+        <div class="post-header">
+          <h3>Riquelme • Cachos Masculinos</h3>
+          <span>Post #3 • Finalização Prática</span>
+        </div>
+        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=800" class="post-image" alt="Homem aplicando creme no cabelo cacheado">
+        <div class="post-content">
+          <h2>3. Finalização Rápida de 2 Minutos</h2>
+          <p>Tá sem tempo de manhã? Com o cabelo ainda bem úmido, passe um pouco de creme ativador de cachos com um toque de gelatina, espalhe com as mãos e deixe secar naturalmente.</p>
+          <button class="like-btn" onclick="toggleLike(this)">
+            ♥ <span class="like-count">450</span> Curtidas
+          </button>
+        </div>
+      </article>
+
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2026 Universo Cacheado - Projeto de Interface Web</p>
+    <p>&copy; 2026 Cachos do Riquelme — Guia de Estilo Masculino</p>
   </footer>
 
-  <style>.like-btn {
-  background-color: transparent;
-  border: 2px solid var(--primary);
-  color: var(--primary);
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  cursor: pointer;
-  font-weight: bold;
-  margin-top: 1rem;
-  transition: all 0.3s ease;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-}
+  <!-- Script do Botão de Curtir -->
+  <script>
+    function toggleLike(button) {
+      const countSpan = button.querySelector('.like-count');
+      let currentLikes = parseInt(countSpan.textContent);
 
-.like-btn:hover {
-  background-color: var(--primary);
-  color: white;
-}
-
-.like-btn.liked {
-  background-color: var(--secondary);
-  border-color: var(--secondary);
-  color: white;
-}</style>
-</body>
-<div class="card-content">,
-    <button class="like-btn" onclick="toggleLike(this)">
-  🧒  <span class="like-count">0</span> Curtidas
-</button>
-</body>
-<script>
-  function toggleLike(button) {
-    const countSpan = button.querySelector('.like-count');
-    let currentLikes = parseInt(countSpan.textContent);
-
-    if (button.classList.contains('liked')) {
-      button.classList.remove('liked');
-      countSpan.textContent = currentLikes - 1;
-    } else {
-      button.classList.add('liked');
-      countSpan.textContent = currentLikes + 1;
+      if (button.classList.contains('liked')) {
+        button.classList.remove('liked');
+        countSpan.textContent = currentLikes - 1;
+      } else {
+        button.classList.add('liked');
+        countSpan.textContent = currentLikes + 1;
+      }
     }
-  }
-</script>
+  </script>
+
+</body>
 </html>

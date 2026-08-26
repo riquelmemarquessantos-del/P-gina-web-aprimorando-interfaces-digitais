@@ -1,0 +1,165 @@
+OCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mundo Dos Cachos - Guia de Curvaturas e Cuidados</title>
+  <style>
+    :root {
+      --primary: #7b4397;
+      --secondary: #dc2430;
+      --bg-color: #faf6f0;
+      --card-bg: #ffffff;
+      --text-color: #2b2b2b;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .grid-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 1.5rem;
+    }
+
+    .card-content h2 {
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #eee;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Universo Cacheado</h1>
+    <p>Guia prático para valorizar a textura natural dos seus fios</p>
+  </header>
+
+  <main>
+    <section class="grid-section">
+      <article class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOcalguX7p22wn6EcUoTWgEF9u7H31uMRcmRlDyQVorMbX-EX_M2WECCc&s=10" alt="Tabela de curvaturas de cabelos cacheados e crespos">
+        <div class="card-content">
+          <h2>Tipos de Curvatura</h2>
+          <p>Entender a diferença entre os tipos 3A, 3B e 3C é essencial para escolher os produtos corretos e garantir a definição ideal dos fios.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFgHHdr6-nPRp3u-VOj1YVCUIwhJqldmYco2S-845oHBYClna3Kr-ZwW5e&s=10" alt="Rotina de cuidados com cabelo cacheado">
+        <div class="card-content">
+          <h2>Rotina de Tratamento</h2>
+          <p>Cabelos cacheados exigem nutrição e hidratação frequentes devido à dificuldade da oleosidade natural percorrer a extensão do fio em espiral.</p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Universo Cacheado - Projeto de Interface Web</p>
+  </footer>
+
+  <style>.like-btn {
+  background-color: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.like-btn:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+.like-btn.liked {
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+  color: white;
+}</style>
+</body>
+<div class="card-content">,
+    <button class="like-btn" onclick="toggleLike(this)">
+  🧒  <span class="like-count">0</span> Curtidas
+</button>
+</body>
+<script>
+  function toggleLike(button) {
+    const countSpan = button.querySelector('.like-count');
+    let currentLikes = parseInt(countSpan.textContent);
+
+    if (button.classList.contains('liked')) {
+      button.classList.remove('liked');
+      countSpan.textContent = currentLikes - 1;
+    } else {
+      button.classList.add('liked');
+      countSpan.textContent = currentLikes + 1;
+    }
+  }
+</script>
+</html>
