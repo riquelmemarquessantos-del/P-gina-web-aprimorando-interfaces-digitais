@@ -117,5 +117,30 @@
     <p>&copy; 2026 Universo Cacheado - Projeto de Interface Web</p>
   </footer>
 
+  <style>.like-btn {
+  background-color: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.like-btn:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+.like-btn.liked {
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+  color: white;
+}</style>
 </body>
 </html>
